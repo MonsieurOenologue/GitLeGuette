@@ -6,5 +6,4 @@
 #include <sys/types.h>
 #include <sys/time.h>
 
-int ls(char *dir);
 int test_exec(char *data);

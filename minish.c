@@ -8,6 +8,7 @@
 */
 //askip c'est pas nécessaire.
 
+
 int test_exec(char *data) {
   //char data[] = "ls -larsh /home/uj/dev/";
   //LET'S COUNT PARAMETERS
@@ -33,10 +34,9 @@ int test_exec(char *data) {
     printf("%s\n", parsed[i]);
   }
   //char *parsed[] = {"ls", "-la", "/home/uj", NULL};
-  printf("%d\n", execvp(parsed[0], parsed));
   //printf("%d\n", execlp(parsed_list, parsed_list, 0));
 
-  return 1;
+  return execvp(parsed[0], parsed);
 }
 
 
