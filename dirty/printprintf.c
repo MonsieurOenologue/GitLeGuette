@@ -3,32 +3,12 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <string.h>
-int main() {
-  // char data[] = "ls ~";
-  // int ret = exec(data);
-  // //ls("/home/uj/");
-  // printf("%d", ret);
-  // return 0;
-  char data[] = "ls -la /home/uj";
-  test_exec(data);
-}
+
 
 /*
   Exec est une callback
 */
 //askip c'est pas nécessaire.
-int ls(char *dir) {
-  int len;
-  struct dirent *pDirent;
-  DIR *pDir;
-
-  pDir = opendir (dir);
-  while ((pDirent = readdir(pDir)) != NULL) {
-            printf ("[%s]\n", pDirent->d_name);
-        }
-        closedir (pDir);
-        return 0;
-}
 
 int test_exec(char *data) {
   //char data[] = "ls -larsh /home/uj/dev/";
