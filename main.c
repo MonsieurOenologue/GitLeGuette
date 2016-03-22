@@ -3,8 +3,6 @@
 #define MAX_LENGTH 1024
 
 int main(int argc, char **args){
-    //pthread_t pth; //Au revoir les threads
-    int i = 0;
     pid_t pid;
     struct timeval start, stop;
 
@@ -41,24 +39,5 @@ int main(int argc, char **args){
     }
     /*Fin du copie collage*/
 
-
-
-
-    //@deprecated Au revoir les threads
-    /*
-    //Thread creation
-    pthread_create(&pth, NULL, threadMain, "chargement du thread");
-
-    //Waits for the thread specified to terminate
-    pthread_join(pth, NULL);
-
-    while(i < 10){
-        usleep(100);
-        printf("main running, c'est super\n");
-        i++;
-    }
-
-    pthread_exit(pth);
-    */
     return 0;
 }

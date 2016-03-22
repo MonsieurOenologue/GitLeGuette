@@ -4,5 +4,3 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/time.h>
-
-void * threadMain(void *arg);
