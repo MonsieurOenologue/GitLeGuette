@@ -8,10 +8,9 @@ int main(int argc, char **args){
 
     /*Check parameter*/
 
-
-    /* start chrono */
-    gettimeofday(&start, 0);
-
+    char *name[MAX_LENGTH];
+    printf("Hello to minish, the barely usable shell. \nWhat's your name ?\nName : ");
+    scanf("%s", &name);
     switch(pid = fork()){
         case -1 : perror("fork failed");
             exit(2);
@@ -41,7 +40,7 @@ int main(int argc, char **args){
     char line[MAX_LENGTH];
 
     while(1){
-        printf("$ ");
+        printf("%s\>$ ", name);
         if(!fgets(line, MAX_LENGTH, stdin)){
             break;
         }
