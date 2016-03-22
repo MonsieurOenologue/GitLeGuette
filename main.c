@@ -12,7 +12,7 @@ int main(void){
 
     while(i < 10){
         usleep(100);
-        printf("main running\n");
+        printf("main running, c'est super\n");
         i++;
     }
 
