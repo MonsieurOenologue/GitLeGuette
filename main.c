@@ -6,13 +6,23 @@ int main(int argc, char **args){
     pid_t pid;
     struct timeval start, stop;
 
+    /*Check parameter*/
+
+
+    /* start chrono */
+    gettimeofday(&start, 0);
+
     switch(pid = fork()){
         case -1 : perror("fork failed");
             exit(2);
         case 0 :
             /* child process*/
-            execvp(args[1], args+1);
+            //execvp(args[1], args+1);
+            //char data[] = "ls -la /home/uj";
+            //char data[] = "ls -la ";
+            test_exec("ls -la");
             exit(0);
+
         default:
 
         //Change this part (extract from myTime.c, TD1 exo4)
