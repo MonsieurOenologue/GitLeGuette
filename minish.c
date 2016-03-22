@@ -8,7 +8,7 @@
 pthread_t threadId[1];
 
 void * threadMain(void *arg){
-    int i = 0;
+    unsigned long i = 0; 
     char *str;
 
     str=(char*)arg;
