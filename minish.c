@@ -1,14 +1,16 @@
 #include "minish.h"
 
+/*Honnêtement ce fichier ne sert à rien pour le moment*/
+
 //printf le résultat d'un ls
 
 
-
+//@deprecated All the code below.
 //thread bonjour
 pthread_t threadId[1];
 
 void * threadMain(void *arg){
-    unsigned long i = 0; 
+    unsigned long i = 0;
     char *str;
 
     str=(char*)arg;
@@ -20,10 +22,6 @@ void * threadMain(void *arg){
     }
     return 0;
 }
-
-
-
-
 
 //Algo
 //while not EOF(stdin)
